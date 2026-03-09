@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.u-dummy-content {
+    height: 3rem;
+    background-color: #7f7f7f;
+    border-radius: 0.6rem;
+}
+
+.layout__wrapper {
+    height: 100%;
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: bisque;
+    padding: 2rem;
+
+    .menu {
+        span {
+            font-size: 1.4rem;
+        }
+
+        nav {
+            padding: 1rem 0;
+
+            ul {
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                li{
+                    padding: 1rem;
+                    font-size: 1.2rem;
+                    background-color: #7f7f7f;
+                    border-radius: .4rem;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #dcdcdc;
+
+    .header--left,
+    .header--right {
+        width: 30%;
+    }
+}
+
+.grid-wrapper {
+    flex: 1;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr;
+    grid-template-rows: 2fr 3fr 5fr;
+    gap: 1rem;
+
+    .content-box {
+        background-color: lightcoral;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .target{
+        grid-row: span 2;
+    }
+
+    .sales{
+        grid-column: span 2;
+    }
+
+    .statistics{
+        grid-column: 1/-1;
+        grid-row: 3;
+    }
+}
